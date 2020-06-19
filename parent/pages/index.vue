@@ -11,7 +11,7 @@
           ref="child"
           class="iframe"
           src="http://localhost:4001/"
-
+          v-show="isIframe"
         ></iframe>
       </div>
     </div>
@@ -39,6 +39,7 @@ export default {
   methods: {
     iframeMessage (e) {
       if (e.data.mounted) {
+        this.isIframe = true;
         console.log(111, 'Iframe Page Mounted');
         this.iframe.postMessage({
           message: 'Message from parent'

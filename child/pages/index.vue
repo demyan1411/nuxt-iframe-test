@@ -1,5 +1,5 @@
 <template>
-  <div class="container" v-if="message">
+  <div class="container">
     <div>
       <h1 class="title">
         child
